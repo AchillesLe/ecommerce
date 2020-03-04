@@ -24,6 +24,20 @@
             }
             redirect('admin/category');
         }
+
+        function getProducts(){
+            $category   = new Category();
+            if(isset($_GET['s'])){
+                $slug       = get('s');
+                $data['products']   = $category->getAllProductBySlug($slug);
+            }else{
+                $data['products']   = [];
+            }
+            $data['categories'] =  $category->getAll();
+            $this->view = new View( VIEW_URL.'category.php' , 'Products' , $data );
+            $this->view->render();
+            exit();
+        }
                  
     }    
 ?>

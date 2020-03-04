@@ -15,5 +15,19 @@
             return $this->update($this->table,$data,['id'=>$id]);
         }
 
+        public function getAllProductBySlug($slug){
+            return $this->query("
+                WITH RECURSIVE categoryTree (name,id,parent_id)
+                AS ( 	SELECT child.name, child.id,child.parent_id
+                            FROM categories child
+                            WHERE slug = '$slug'
+                            UNION ALL
+                            SELECT child.name, child.id,child.parent_id
+                            FROM categories child
+                                JOIN categoryTree tree ON tree.id = child.parent_id 
+                            )
+                SELECT a.* FROM products a INNER JOIN ( SELECT *  FROM categoryTree ) b ON a.category_id = b.id  
+            ");
+        }
     }
 ?>
