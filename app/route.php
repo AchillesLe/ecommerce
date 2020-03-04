@@ -35,7 +35,7 @@
         if( $section === "admin" ){ 
 
             switch( $url ){
-                case "/admin/login":  call_controller ( 'Admin', 'dologin'  ); break;
+                case "/admin/add-category":  call_controller ( 'Category', 'insert'  ); break;
                 
                 default: call_controller( 'Error' , 'index'  );break;
             }

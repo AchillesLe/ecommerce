@@ -37,12 +37,14 @@
         function query( $query ){
             try{
                 $result = [];
+                $this->open_conn();
                 $stmt = $this->db->query( $query );
                 if( $stmt ){
                     while ( $row = $stmt->fetch(\PDO::FETCH_ASSOC) ){
                         $result[] = $row;
                     }
                 }
+                $this->close_conn();
                 return $result;
             }catch(Exception $e){
                 return [];
