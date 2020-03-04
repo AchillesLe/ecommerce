@@ -1,4 +1,4 @@
-# ecommerce
+# ecommerce http://e-commerce.dev.io/
 #first
 - import database from database folder
 - change information of your database in file app/core/config.php

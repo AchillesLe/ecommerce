@@ -25,6 +25,7 @@
         } else{
             switch( $url ){ 
                 case "/":   call_controller ( 'Home','index'  ); break;
+                case "/category":   call_controller ( 'Home','category'  ); break;
                 
                 default: call_controller( 'Error' , 'index'  );break;
             }

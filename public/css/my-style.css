@@ -7,3 +7,10 @@
     border: 1px solid #afafaf;
     min-height: 300px;
 }
+
+.item{
+    border: 1px solid #fff!important;
+}
+.item-price{
+    font-size: 13px;
+}
