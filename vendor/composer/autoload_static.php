@@ -37,6 +37,8 @@ class ComposerStaticInitc5c4cae29292131076e0051208b5c9c5
         'Database' => __DIR__ . '/../..' . '/app/models/Database.php',
         'ErrorController' => __DIR__ . '/../..' . '/app/controllers/ErrorController.php',
         'HomeController' => __DIR__ . '/../..' . '/app/controllers/HomeController.php',
+        'Product' => __DIR__ . '/../..' . '/app/models/Product.php',
+        'ProductController' => __DIR__ . '/../..' . '/app/controllers/ProductController.php',
         'View' => __DIR__ . '/../..' . '/app/core/view.php',
     );
 

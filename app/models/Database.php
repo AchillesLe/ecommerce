@@ -18,11 +18,7 @@
 
         function open_conn(){
             try{
-                if( !isset($GLOBALS['_config']['connection']) || !empty($GLOBALS['_config']['connection']) ){
-                    $GLOBALS['_config']['connection'] =  new \PDO("mysql:host=$this->host;dbname=$this->dbname;port=$this->port", $this->username , $this->password );
-                }
-                $this->db = $GLOBALS['_config']['connection'];
-                // $this->db =  new \PDO("mysql:host=$this->host;dbname=$this->dbname;port=$this->port", $this->username , $this->password );
+                $this->db =  new \PDO("mysql:host=$this->host;dbname=$this->dbname;port=$this->port", $this->username , $this->password );
                 $this->db->exec("set names utf8");
                 return $this->db;
             }catch( PDOException $e ){
@@ -31,7 +27,7 @@
         }
         
         function close_conn(){
-            // $this->db = null;
+            $this->db = null;
         }
 
         function query( $query ){

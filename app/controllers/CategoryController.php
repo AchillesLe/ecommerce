@@ -4,9 +4,9 @@
         private $view = null;
 
         function index(){
-            $category = new Category();
-            $all = $category->getAll();
-            $this->view = new View( VIEW_URL.'admin/category.php' , 'Category' , [ 'list' => $all ] );
+            $category   = new Category();
+            $all        = $category->getAll();
+            $this->view = new View( VIEW_URL.'admin/category.php' , 'Categories' , [ 'list' => $all ] );
             $this->view->render();
             exit();
         }
@@ -21,18 +21,6 @@
                     $data['parent_id'] = post( 'parent_id' ) ;
                 }
                 $category->add($data);
-            }
-            redirect('admin/category');
-        }
-
-        function update(){
-            if( isset($_POST['name'],$_POST['id']) ){
-                $data = [];
-                $category = new Category();
-                $id = post('id');
-                $data['name'] = post('name');;
-                $data['slug'] = to_slug( $data['name'] ) ;
-                $category->edit($data,$id);
             }
             redirect('admin/category');
         }

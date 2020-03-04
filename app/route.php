@@ -14,6 +14,7 @@
             switch( $url ){
                 case "/admin": call_controller ( 'Admin', 'index'  ); break;
                 case "/admin/category":   call_controller ( 'Category','index'  ); break;
+                case "/admin/product":   call_controller ( 'Product','index'  ); break;
 
                 case "/admin/test-1":   call_controller ( 'Admin','test1'  ); break;
                 case "/admin/test-2":   call_controller ( 'Admin','test2'  ); break;
@@ -36,6 +37,7 @@
 
             switch( $url ){
                 case "/admin/add-category":  call_controller ( 'Category', 'insert'  ); break;
+                case "/admin/add-product":  call_controller ( 'Product', 'insert'  ); break;
                 
                 default: call_controller( 'Error' , 'index'  );break;
             }

@@ -43,6 +43,7 @@
                             <div class="sb-sidenav-menu-heading">Core</div>
                             <a class="nav-link" href="<?=base_url('admin')?>"><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>Dashboard</a>
                             <a class="nav-link" href="<?=base_url('admin/category')?>"><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>Categories</a>
+                            <a class="nav-link" href="<?=base_url('admin/product')?>"><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>Product</a>
 
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">

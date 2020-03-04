@@ -17,5 +17,7 @@ return array(
     'Database' => $baseDir . '/app/models/Database.php',
     'ErrorController' => $baseDir . '/app/controllers/ErrorController.php',
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
+    'Product' => $baseDir . '/app/models/Product.php',
+    'ProductController' => $baseDir . '/app/controllers/ProductController.php',
     'View' => $baseDir . '/app/core/view.php',
 );

@@ -1,10 +1,10 @@
 <?php 
-    class Category extends Database{
+    class Product extends Database{
 
-        private $table = "categories";
+        private $table = "products";
         
         public function getAll(){
-            return $this->query("SELECT a.*,b.name as parent_name FROM $this->table a LEFT JOIN categories b ON a.parent_id = b.id");
+            return $this->query("SELECT a.*,b.name as category FROM $this->table a LEFT JOIN categories b ON a.category_id = b.id");
         }
 
         public function add($data){

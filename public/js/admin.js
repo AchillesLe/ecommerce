@@ -1,8 +1,11 @@
 $(document).ready(function(){
     
-    $('#tbl-products').DataTable();
+    
+    if( $('#page-product').length > 0 ){
+        $('#tbl-product').DataTable();
+    }
 
     if( $('#page-category').length > 0 ){
-        $('#tbl-categories').DataTable();
+        $('#tbl-category').DataTable();
     }
 })
