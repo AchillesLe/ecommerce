@@ -4,7 +4,7 @@
         private $table = "products";
         
         public function getAll(){
-            return $this->query("SELECT a.*,b.name as category FROM $this->table a LEFT JOIN categories b ON a.category_id = b.id");
+            return $this->query("SELECT a.*,b.name as category FROM $this->table a LEFT JOIN categories b ON a.category_id = b.id ORDER BY id DESC");
         }
 
         public function add($data){
