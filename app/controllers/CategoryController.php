@@ -27,13 +27,15 @@
 
         function getProducts(){
             $category   = new Category();
+            $data['categories'] =  $category->getAll();
+            $data['products']   = [];
             if(isset($_GET['s'])){
                 $slug       = get('s');
-                $data['products']   = $category->getAllProductBySlug($slug);
-            }else{
-                $data['products']   = [];
+                $cate_info = $category->getBySlug($slug);
+                if( !empty($cate_info) ){
+                    $data['products']   = $category->getAllProductBySlug($cate_info['id']);
+                }
             }
-            $data['categories'] =  $category->getAll();
             $this->view = new View( VIEW_URL.'category.php' , 'Products' , $data );
             $this->view->render();
             exit();
